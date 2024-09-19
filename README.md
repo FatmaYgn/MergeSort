@@ -1,11 +1,18 @@
 # MergeSort
 
 Merge Sort, diziyi bölme ve sonra birleştirme prensibine dayanan bir sıralama algoritmasıdır.
+
 **Başlangıç Dizisi**
+
 `[16, 21, 11, 8, 12, 22]`
-1. **Adım**
+
+**1. Adım: Diziyi Bölme**
+
+Dizi, ortasından ikiye bölünerek alt dizilere ayrılır:
 `[16, 21, 11] ve [8, 12, 22]`
-2. **Adım**
+
+**2. Adım: Alt Dizileri Daha Fazla Bölme**
+
 ```Her bir alt dizi tekrar ortasından bölünür:
 [16] ve [21, 11]
 [21] ve [11]
@@ -13,28 +20,23 @@ Merge Sort, diziyi bölme ve sonra birleştirme prensibine dayanan bir sıralama
 [12] ve [22]
 Artık alt diziler şunlardır: [16], [21], [11], [8], [12], [22]
 ```
-3. **Adım**
+**3. Adım: Birleştirme**
+
 ```Alt diziler, sıralı bir şekilde birleştirilir:
-Alt diziler, sıralı bir şekilde birleştirilir:
+[21] ve [11]: Birleştir: [11, 21]
+[16] ve [11, 21]: Birleştir: [11, 16, 21]
+[12] ve [22]: Birleştir: [12, 22]
+[8] ve [12, 22]: Birleştir: [8, 12, 22]
 
-[21] ve [11]:
-
-Birleştir: [11, 21]
-[16] ve [11, 21]:
-
-Birleştir: [11, 16, 21]
-[12] ve [22]:
-
-Birleştir: [12, 22]
-[8] ve [12, 22]:
-
-Birleştir: [8, 12, 22]
 Son olarak, [11, 16, 21] ve [8, 12, 22] dizilerini birleştir:
+[8, 11, 12, 16, 21, 22]
 ```
 **Sonuç**
+
 `Dizinin sıralanmış hali: [8, 11, 12, 16, 21, 22]`
 
 ## Big-O Notation Gösterimi
+
 - En kötü durumda: O(n log n)
 - En iyi durumda: O(n log n)
 - Ortalama durumda: O(n log n)
